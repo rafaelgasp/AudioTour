@@ -21,7 +21,7 @@
         android:id="@+id/txtName" />
     <TextView
         android:text="@string/NewUserEmail"
-        android:id="@+id/textView1"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
@@ -29,4 +29,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtEmail" />
+    <TextView
+        android:text="@string/NewUserLocation"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLocation" />
 </LinearLayout>

@@ -9,5 +9,6 @@
     <string name="ButtonAddNewUser">Adicionar Usuário</string>
     <string name="NewUserName">Nome:</string>
     <string name="NewUserEmail">Email:</string>
- 
+    <string name="NewUserDateOfBirth">Data de Nascimento:</string>
+    <string name="NewUserLocation">Cidade/Bairro:</string> 
 </resources>
