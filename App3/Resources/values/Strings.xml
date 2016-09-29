@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main screen -->
+    <string name="ButtonMain">Iniciar Tour!</string>
+    <string name="ApplicationName">AudioTour</string>
+
+    <!-- Add new user screen -->
+    <string name="NewUserScreenTitle">Cadastrar Usuário</string>
+    <string name="ButtonAddNewUser">Adicionar Usuário</string>
+    <string name="NewUserName">Nome:</string>
+    <string name="NewUserEmail">Email:</string>
+ 
+</resources>
