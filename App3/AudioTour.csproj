@@ -41,24 +41,49 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MongoDB.Bson, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.3.0\lib\netstandard1.5\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.3.0\lib\netstandard1.5\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.3.0\lib\netstandard1.5\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Mono.Android">
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Reflection.Emit.ILGeneration, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Emit.ILGeneration.4.0.1\lib\netstandard1.3\System.Reflection.Emit.ILGeneration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Emit.Lightweight.4.0.1\lib\netstandard1.3\System.Reflection.Emit.Lightweight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AudioTourScreenActivity.cs" />
+    <Compile Include="App.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="NewUserScreenActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
+    <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\TourScreen.axml">
