@@ -30,8 +30,7 @@ namespace AudioTour
             Button buttonNU = FindViewById<Button>(Resource.Id.ButtonAddNewUser);
 
             buttonNU.Click += delegate {
-                //StartActivity(typeof(NewUserScreenActivity));
-                StartActivity(typeof(App));
+                StartActivity(typeof(NewUserScreenActivity));
             };
         }
     }

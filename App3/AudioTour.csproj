@@ -74,7 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AudioTourScreenActivity.cs" />
-    <Compile Include="App.cs" />
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="NewUserScreenActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
