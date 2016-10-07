@@ -78,32 +78,35 @@ namespace AudioTour
 			// aapt resource value: 0x7f060000
 			public const int ButtonMain = 2131099648;
 			
+			// aapt resource value: 0x7f060009
+			public const int btnAddNewUser = 2131099657;
+			
+			// aapt resource value: 0x7f060011
+			public const int btnPlay = 2131099665;
+			
 			// aapt resource value: 0x7f060010
-			public const int btnPlay = 2131099664;
+			public const int btnStop = 2131099664;
 			
-			// aapt resource value: 0x7f06000f
-			public const int btnStop = 2131099663;
+			// aapt resource value: 0x7f06000e
+			public const int gridLayout1 = 2131099662;
 			
-			// aapt resource value: 0x7f06000d
-			public const int gridLayout1 = 2131099661;
-			
-			// aapt resource value: 0x7f06000a
-			public const int imageButton1 = 2131099658;
+			// aapt resource value: 0x7f06000b
+			public const int imageButton1 = 2131099659;
 			
 			// aapt resource value: 0x7f060002
 			public const int linearLayout1 = 2131099650;
 			
-			// aapt resource value: 0x7f06000e
-			public const int relativeLayout1 = 2131099662;
+			// aapt resource value: 0x7f06000f
+			public const int relativeLayout1 = 2131099663;
+			
+			// aapt resource value: 0x7f06000d
+			public const int seekBar1 = 2131099661;
+			
+			// aapt resource value: 0x7f060012
+			public const int space1 = 2131099666;
 			
 			// aapt resource value: 0x7f06000c
-			public const int seekBar1 = 2131099660;
-			
-			// aapt resource value: 0x7f060011
-			public const int space1 = 2131099665;
-			
-			// aapt resource value: 0x7f06000b
-			public const int space2 = 2131099659;
+			public const int space2 = 2131099660;
 			
 			// aapt resource value: 0x7f060003
 			public const int textView1 = 2131099651;
@@ -123,8 +126,8 @@ namespace AudioTour
 			// aapt resource value: 0x7f060004
 			public const int txtName = 2131099652;
 			
-			// aapt resource value: 0x7f060009
-			public const int txtOut = 2131099657;
+			// aapt resource value: 0x7f06000a
+			public const int txtOut = 2131099658;
 			
 			static Id()
 			{
