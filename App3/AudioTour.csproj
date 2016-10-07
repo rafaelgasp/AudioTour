@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MapActivity.cs" />
     <Compile Include="AudioTourScreenActivity.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="MainActivity.cs" />
@@ -91,6 +92,10 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\NewUserScreen.axml">
       <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MapScreen.axml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
