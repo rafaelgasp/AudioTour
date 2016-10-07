@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="AudioTour.AudioTour" android:versionCode="1" android:versionName="1.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xamarin.AudioTour" android:versionCode="1" android:versionName="1.0">
 	<uses-sdk android:minSdkVersion="16" />
-	<application android:label="AudioTour"></application>
+	<application android:label="AudioTour">
+    <!-- Put your Google Maps V2 API Key here. -->
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDyP4IXxawRmw806Lh2MjC4JUQQRhLzmLY" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+  </application>
 </manifest>

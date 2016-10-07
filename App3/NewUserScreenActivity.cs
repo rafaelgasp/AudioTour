@@ -20,7 +20,6 @@ namespace AudioTour
     [Activity(Label = "Novo Usuário")]
     public class NewUserScreenActivity : Activity
     {
-        IMongoDatabase dataBase;
         EditText txtName, txtEmail, txtLocation;
 
         protected override void OnCreate(Bundle bundle)
