@@ -71,9 +71,24 @@
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Base.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Maps">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MapActivity.cs" />
     <Compile Include="AudioTourScreenActivity.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="MainActivity.cs" />
@@ -92,10 +107,6 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\NewUserScreen.axml">
       <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\MapScreen.axml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +137,13 @@
     <AndroidResource Include="Resources\drawable\previousbutton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
 		<Target Name="BeforeBuild">
