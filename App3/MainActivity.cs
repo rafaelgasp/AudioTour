@@ -32,6 +32,12 @@ namespace AudioTour
             buttonNU.Click += delegate {
                 StartActivity(typeof(NewUserScreenActivity));
             };
+
+            Button buttonVM = FindViewById<Button>(Resource.Id.btnMap);
+
+            buttonVM.Click += delegate {
+                StartActivity(typeof(MapScreenActivity));
+            };
         }
     }
 }
