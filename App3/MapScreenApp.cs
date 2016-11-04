@@ -1,10 +1,12 @@
 ﻿using Android.Locations;
+using Java.Util;
+using Plugin.Geolocator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
-
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -13,8 +15,13 @@ namespace AudioTour
     public class MapScreenApp : Application
     {
         Map map;
+        Plugin.Geolocator.Abstractions.Position currentPosition;
+
         public MapScreenApp()
         {
+
+            fillPosition();
+          
             map = new Map
             {
                 //IsShowingUser = true,
@@ -25,9 +32,9 @@ namespace AudioTour
 
             // You can use MapSpan.FromCenterAndRadius 
             //map.MoveToRegion (MapSpan.FromCenterAndRadius (new Position (37, -122), Distance.FromMiles (0.3)));
-            // or create a new MapSpan object directly
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-23.519861, -46.404082), Distance.FromMiles(0.3)));
+            // or create a new MapSpan object directl           
 
+        
             // add the slider
             var slider = new Slider(1, 18, 1);
             slider.ValueChanged += (sender, e) => {
@@ -64,6 +71,17 @@ namespace AudioTour
                     CalculateBoundingCoordinates(map.VisibleRegion);
             };
 
+        }
+
+        async void fillPosition()
+        {
+            var locator = CrossGeolocator.Current;
+
+            locator.DesiredAccuracy = 100; //100 is new default
+
+            currentPosition = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
+
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(currentPosition.Latitude, currentPosition.Longitude), Distance.FromMiles(0.3)));
         }
 
         /// <summary>

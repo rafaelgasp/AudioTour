@@ -11,11 +11,9 @@ namespace AudioTour
 {
     public partial class MapScreen : ContentPage
     {
-        Map map;
-
         public MapScreen()
         {
             InitializeComponent();
         }
-    }
+    }   
 }
