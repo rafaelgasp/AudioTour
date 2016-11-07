@@ -16,6 +16,7 @@ namespace AudioTour
     {
         Map map;
         Plugin.Geolocator.Abstractions.Position currentPosition;
+        Pin currentPin;
 
         public MapScreenApp()
         {
@@ -24,7 +25,7 @@ namespace AudioTour
           
             map = new Map
             {
-                //IsShowingUser = true,
+                IsShowingUser = true,
                 HeightRequest = 100,
                 WidthRequest = 960,
                 VerticalOptions = LayoutOptions.FillAndExpand
@@ -45,6 +46,13 @@ namespace AudioTour
                     map.MoveToRegion(new MapSpan(map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
             };
 
+            currentPin = new Pin();
+            currentPin.Type = PinType.Generic;
+            currentPin.Label = "Você";
+
+            map.Pins.Add(currentPin);
+
+
             var pin = new Pin
             {
                 Type = PinType.Place,
@@ -52,9 +60,9 @@ namespace AudioTour
                 Label = "Casa",
                 Address = "Rua Manuel Soares de Medeiros"
             };
-            
+
             map.Pins.Add(pin);
-          
+
 
             // put the page together
             var stack = new StackLayout { Spacing = 0 };
@@ -81,7 +89,12 @@ namespace AudioTour
 
             currentPosition = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
 
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(currentPosition.Latitude, currentPosition.Longitude), Distance.FromMiles(0.3)));
+            Position p = new Position(currentPosition.Latitude, currentPosition.Longitude);
+
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(p, Distance.FromMiles(0.3)));
+
+            map.Pins.First().Position = p;
+
         }
 
         /// <summary>
